@@ -1,66 +1,86 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<title>Connect - Mafalda Reis</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Mafalda Reis Portfolio">
-		<meta name="keywords" content="Mafalda Reis Portfolio">
-		<!-- Livraria bootstrap -->
-		<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+<!doctype html>
+<html>
+  <head>
+    <title>Connect - Mafalda Reis</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Mafalda Reis Portfolio" />
+    <meta name="keywords" content="Mafalda Reis Portfolio" />
+    <!-- Livraria bootstrap -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/bootstrap/css/bootstrap.min.css"
+    />
 
-		<!-- Livraria de animação com o scroll -->
-		<link rel="stylesheet" type="text/css" href="assets/aos/css/aos.css">
-		<!-- Livraria de icons -->
-		<link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css">
+    <!-- Livraria de animação com o scroll -->
+    <link rel="stylesheet" type="text/css" href="assets/aos/css/aos.css" />
+    <!-- Livraria de icons -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/fontawesome/css/all.min.css"
+    />
 
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-	<body class="connect-page bg-black">
-		<header class="header">
-			<nav class="nav">
-				<ul class="lista-header container">
-					<li><a href="index.html">HOME</a></li>
-					<li><a href="connect.html">CONNECT</a></li>
-					<li><a href="work.html">WORK</a></li>
-				</ul>
-			</nav>
-		</header>
-		<main class="connect-hero">
-			<div class="connect-hero-info">
-				<div class="connect-title">
-					<h1>let's<br>connect</h1>
-				</div>
-				<div class="connect-info">
-					<p>Porto, Portugal</p>
-					<p><a href="tel:+351939108823">+351 939 108 823</a></p>
-					<p><a href="mailto:mafaldas.design@icloud.com">mafaldas.design@icloud.com</a></p>
-				</div>
-				<div class="connect-socials">
-					<a href="https://www.linkedin.com/in/mafaldareis" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-					<a href="https://www.behance.net/mafaldasreis" target="_blank" rel="noopener noreferrer" aria-label="Behance"><i class="fa-brands fa-behance"></i></a>
-					<div>
-						<button class="btn-blue" type="button" onclick="window.open('files/mafalda-reis-cv.pdf', '_blank', 'noopener,noreferrer')">DOWNLOAD MY CV</button>
-					</div>
-				</div>
-			</div>
-		</main>
-		<!-- Livraria jQuery -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<!-- Livraria bootstrap -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-		<!-- Livraria de animação com o scroll -->
-		<script src="assets/aos/js/aos.js"></script>
-		<!-- Livraria de icons -->
-		<script src="assets/fontawesome/js/all.min.js"></script>
-		<!-- Importar o meu Script -->
-		<script src="js/scripts.js"></script>
-		<!-- Cursor personalizado -->
-		<script src="js/cursor.js"></script>
-		<!-- Hover dos círculos "about me" -->
-		<script src="js/about-circles.js"></script>
-		<!-- Menu de ecrã inteiro -->
-		<script src="js/menu.js"></script>
-	</body>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
+  <body class="bg-black">
+    <header class="header">
+      <nav class="nav">
+        <ul class="lista-header container">
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="connect.html">CONNECT</a></li>
+          <li><a href="work.html">WORK</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="connect-hero container">
+      <div class="connect-hero-info row">
+        <div class="connect-title col-6">
+          <h1>let's<br />connect</h1>
+        </div>
+        <div class="connect-info col-3">
+          <p>Porto,Portugal</p>
+          <p><a>+351 939 108 823</a></p>
+          <p>mafaldas.design@gmail.com</p>
+        </div>
+        <div class="connect-socials col-3">
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-behance"></i></a>
+          <div>
+            <button
+              class="btn-blue"
+              type="button"
+              onclick="
+                window.open(
+                  'files/mafalda-reis-cv.pdf',
+                  '_blank',
+                  'noopener,noreferrer',
+                )
+              "
+            >
+              DOWNLOAD MY CV
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Livraria jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Livraria bootstrap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Livraria de animação com o scroll -->
+    <script src="assets/aos/js/aos.js"></script>
+    <!-- Livraria de icons -->
+    <script src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Importar o meu Script -->
+    <script src="js/scripts.js"></script>
+    <!-- Cursor personalizado -->
+    <script src="js/cursor.js"></script>
+    <!-- Hover dos círculos "about me" -->
+    <script src="js/about-circles.js"></script>
+    <!-- Menu de ecrã inteiro -->
+    <script src="js/menu.js"></script>
+  </body>
 </html>
