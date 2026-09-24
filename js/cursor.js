@@ -1,21 +1,16 @@
-// Cursor personalizado: bolinha que reage ao fundo através de mix-blend-mode.
+// Cursor personalizado: bolinha que troca de cor consoante o fundo (pixel a pixel, via mix-blend-mode)
 (function initCustomCursor() {
-	// Em dispositivos táteis mantém o comportamento normal.
-	if (!window.matchMedia('(pointer: fine)').matches) return;
+	// Em ecrãs táteis não há cursor a seguir, por isso não corre
+	if (window.matchMedia('(pointer: coarse)').matches) return;
 
 	var circle = document.querySelector('.custom-cursor');
-	if (!circle) {
-		circle = document.createElement('div');
-		circle.className = 'custom-cursor is-hidden';
-		circle.setAttribute('aria-hidden', 'true');
-		document.body.appendChild(circle);
-	}
+	if (!circle) return;
 
 	document.body.classList.add('cursor-ready');
 
 	document.addEventListener('mousemove', function (e) {
-		circle.style.transform = 'translate3d(' + e.clientX + 'px, ' + e.clientY + 'px, 0) translate(-50%, -50%)';
-		circle.classList.remove('is-hidden');
+		circle.style.left = e.clientX + 'px';
+		circle.style.top = e.clientY + 'px';
 	});
 
 	document.addEventListener('mouseleave', function () {
@@ -25,7 +20,7 @@
 		circle.classList.remove('is-hidden');
 	});
 
-	var interactive = document.querySelectorAll('a, button, input, textarea, select, [role="button"]');
+	var interactive = document.querySelectorAll('a, button');
 	interactive.forEach(function (el) {
 		el.addEventListener('mouseenter', function () {
 			circle.classList.add('is-large');
