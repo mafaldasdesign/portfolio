@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Mafalda Reis Portfolio" />
     <meta name="keywords" content="Mafalda Reis Portfolio" />
-
     <!-- Livraria bootstrap -->
     <link
       rel="stylesheet"
@@ -16,7 +15,6 @@
 
     <!-- Livraria de animação com o scroll -->
     <link rel="stylesheet" type="text/css" href="assets/aos/css/aos.css" />
-
     <!-- Livraria de icons -->
     <link
       rel="stylesheet"
@@ -25,159 +23,29 @@
     />
 
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-
-    <style>
-      /* Só altera a composição da página CONNECT. O resto do projeto fica intacto. */
-      body.connect-page {
-        min-height: 100vh;
-        overflow-x: hidden;
-      }
-
-      .connect-page .connect-hero {
-        min-height: 100vh;
-      }
-
-      .connect-page .connect-hero-info {
-        min-height: 100vh;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: flex-end;
-        padding-bottom: 70px;
-      }
-
-      .connect-page .connect-title h1 {
-        margin: 0;
-        color: var(--azul);
-        font-size: 220px;
-        line-height: 0.76;
-      }
-
-      .connect-page .connect-info {
-        padding-bottom: 4px;
-      }
-
-      .connect-page .connect-info p {
-        margin: 0;
-        line-height: 1.45;
-      }
-
-      .connect-page .connect-info .connect-location {
-        margin-bottom: 24px;
-      }
-
-      .connect-page .connect-info a {
-        color: var(--branco);
-        text-decoration: none;
-      }
-
-      .connect-page .connect-socials {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: flex-start;
-        gap: 36px;
-        padding-bottom: 0;
-      }
-
-      .connect-page .connect-socials a {
-        color: var(--branco);
-        font-size: 25px;
-        text-decoration: none;
-      }
-
-      .connect-page .connect-socials .btn-blue {
-        white-space: nowrap;
-      }
-
-      /* Cursor original da bolinha usado pelo teu cursor.js */
-      .custom-cursor {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 18px;
-        height: 18px;
-        border-radius: 50%;
-        background: var(--branco);
-        pointer-events: none;
-        z-index: 999999;
-        transform: translate(-50%, -50%);
-        mix-blend-mode: difference;
-        transition: width .2s ease, height .2s ease, opacity .2s ease;
-      }
-
-      .custom-cursor.is-large {
-        width: 38px;
-        height: 38px;
-      }
-
-      .custom-cursor.is-hidden {
-        opacity: 0;
-      }
-
-      body.cursor-ready,
-      body.cursor-ready a,
-      body.cursor-ready button {
-        cursor: none !important;
-      }
-
-      @media (max-width: 1199.98px) {
-        .connect-page .connect-title h1 {
-          font-size: clamp(120px, 16vw, 190px);
-        }
-      }
-
-      @media (max-width: 767.98px) {
-        .connect-page .connect-hero-info {
-          align-content: flex-end;
-          row-gap: 36px;
-          padding-bottom: 40px;
-        }
-
-        .connect-page .connect-title,
-        .connect-page .connect-info,
-        .connect-page .connect-socials {
-          width: 100%;
-        }
-
-        .connect-page .connect-title h1 {
-          font-size: clamp(100px, 30vw, 150px);
-        }
-      }
-    </style>
   </head>
-
-  <body class="bg-black connect-page">
-    <!-- Mantém o cursor da bolinha -->
-    <div class="custom-cursor" aria-hidden="true"></div>
-
+  <body class="bg-black">
     <header class="header">
       <nav class="nav">
         <ul class="lista-header container">
           <li><a href="index.html">HOME</a></li>
           <li><a href="connect.html">CONNECT</a></li>
-          <li><a href="work.html">MENU</a></li>
+          <li><a href="work.html">WORK</a></li>
         </ul>
       </nav>
     </header>
-
     <div class="connect-hero container">
       <div class="connect-hero-info row">
         <div class="connect-title col-6">
           <h1>let's<br />connect</h1>
         </div>
-
         <div class="connect-info col-3">
-          <p class="connect-location">Porto, Portugal</p>
-          <p><a href="tel:+351939108823">+351 939 108 823</a></p>
-          <p>
-            <a href="mailto:mafaldas.design@gmail.com"
-              >mafaldas.design@gmail.com</a
-            >
-          </p>
+          <p>Porto,Portugal</p>
+          <p><a href="tel: 939108823">+351 939 108 823</a></p>
+          <a href="mailto: mafaldas.design@gmail.com"
+            ><p>mafaldas.design@gmail.com</p></a
+          >
         </div>
-
         <div class="connect-socials col-3">
           <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
           <a href="#"><i class="fa-brands fa-behance"></i></a>
@@ -199,7 +67,6 @@
         </div>
       </div>
     </div>
-
     <!-- Livraria jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <!-- Livraria bootstrap -->
