@@ -6,6 +6,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="description" content="Mafalda Reis Portfolio">
 		<meta name="keywords" content="Mafalda Reis Portfolio">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Portfolio Mafalda Reis">
+		<meta property="og:description" content="Mafalda Reis Portfolio">
+		<meta property="og:url" content="https://mafaldasdesign.github.io/portfolio/">
+		<meta property="og:image" content="https://mafaldasdesign.github.io/portfolio/img/social-preview.jpg">
+		<meta property="og:image:width" content="1200">
+		<meta property="og:image:height" content="630">
+		<meta property="og:image:alt" content="Banner do portfolio de Mafalda Reis">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Portfolio Mafalda Reis">
+		<meta name="twitter:description" content="Mafalda Reis Portfolio">
+		<meta name="twitter:image" content="https://mafaldasdesign.github.io/portfolio/img/social-preview.jpg">
 		<!-- Livraria bootstrap -->
 		<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
 			
@@ -36,21 +48,28 @@
 				</div>
 			</div>
 			<div class="hp-about container">
-				<div class="hp-about-info row">
-					<div class="hp-about-title col-6">
-						<h2>aBout me</h2>
+				<div class="hp-about-content">
+					<div class="hp-about-info row">
+						<div class="hp-about-title col-6">
+							<h2>aBout me</h2>
+						</div>
+					</div>
+					<div class="hp-about-info row">
+						<div class="hp-about-p col-6">
+							<p>Hi! I'm Mafalda, a designer driven by curiosity and a love for creating things that feel as good as they look. With a background in Design, I found my place in the digital world, where creativity, strategy and interaction come together.
+							For me, every project is an opportunity to explore, experiment and turn an idea into something meaningful.</p>
+						</div>
+					</div>
+					<div class="hp-about-info row">
+						<div class="btns-blue col-6">
+							<button class="btn-blue" type="button" onclick="window.open('files/mafalda-reis-cv.pdf', '_blank', 'noopener,noreferrer')">DOWNLOAD MY CV</button>
+						</div>
 					</div>
 				</div>
-				<div class="hp-about-info row">
-					<div class="hp-about-p col-6">
-						<p>Hi! I'm Mafalda, a designer driven by curiosity and a love for creating things that feel as good as they look. With a background in Design, I found my place in the digital world, where creativity, strategy and interaction come together.
-						For me, every project is an opportunity to explore, experiment and turn an idea into something meaningful.</p>
-					</div>
-				</div>
-				<div class="hp-about-info row">
-					<div class="btns-blue col-6">
-						<button class="btn-blue" type="button" onclick="window.open('files/mafalda-reis-cv.pdf', '_blank', 'noopener,noreferrer')">DOWNLOAD MY CV</button>
-					</div>
+				<div class="about-floating-images" aria-hidden="true">
+					<div class="about-float about-float-one"><img src="img/about-mafalda-01.jpg" alt=""></div>
+					<div class="about-float about-float-two"><img src="img/about-mafalda-03.jpg" alt=""></div>
+					<div class="about-float about-float-three"><img src="img/about-mafalda-02.jpg" alt=""></div>
 				</div>
 			</div>
 			<div class="hp-projects container">
@@ -66,18 +85,21 @@
 					<div class="project-card col-12 col-md-4">
 						<a href="ora.html">
 							<img src="img/ora-mockupcard.png" alt="Projeto Ora" class="img-fluid">
+							<span class="project-name">ORA</span>
 						</a>
 					</div>
 
 					<div class="project-card col-12 col-md-4">
 						<a href="music.html">
-							<img src="img/music-mockupcard.png" alt="Projeto Ora" class="img-fluid">
+							<img src="img/music-mockupcard.png" alt="Projeto Feel the Beat" class="img-fluid">
+							<span class="project-name">FEEL THE BEAT</span>
 						</a>
 					</div>
 
 					<div class="project-card col-12 col-md-4">
 						<a href="#">
-							<img src="img/placeholder-azul.jpg" alt="Projeto Ora" class="img-fluid">
+							<img src="img/placeholder-azul.jpg" alt="Próximo projeto" class="img-fluid">
+							<span class="project-name">COMING SOON</span>
 						</a>
 					</div>
 				</div>
@@ -102,16 +124,16 @@
 							<div class="footer-socials">
 								<h4>SOCIALS</h4>
 								<ul class="ul-footer">
-									<li><a href="index.html">LINKEDIN</a></li>
-									<li><a href="work.html">BEHANCE</a></li>
+									<li><a href="https://www.linkedin.com/in/mafaldareis" target="_blank" rel="noopener noreferrer">LINKEDIN</a></li>
+									<li><a href="https://www.behance.net/mafaldasreis" target="_blank" rel="noopener noreferrer">BEHANCE</a></li>
 								</ul>
 							</div>
 							<div class="footer-connect">
 								<h4>CONNECT</h4>
 								<ul class="ul-footer">
-									<li><a href="index.html">PORTO,PORTUGAL</a></li>
-									<li><a href="work.html">EMAIL</a></li>
-									<li><a href="connect.html">CALL ME</a></li>
+									<li class="footer-location">PORTO, PORTUGAL</li>
+									<li><a href="mailto:mafaldas.design@icloud.com">EMAIL</a></li>
+									<li><a href="tel:+351939108823">CALL ME</a></li>
 								</ul>
 							</div>
 						</nav>
@@ -119,7 +141,7 @@
 				</div>
 				<div class="line"></div>
 				<div class="credits-div">
-					<span class="credits">© 2026 Mafalda Reis  </p>
+					<span class="credits">© 2026 Mafalda Reis</span>
 				</div>
 			</div>
 		</footer>
@@ -140,6 +162,8 @@
 		<script src="js/work-scroll.js"></script>
 		<!-- Hover dos círculos "about me" -->
 		<script src="js/about-circles.js"></script>
+		<!-- Movimento das imagens da secção "about me" -->
+		<script src="js/about-float.js"></script>
 		<!-- Menu de ecrã inteiro -->
 		<script src="js/menu.js"></script>
 

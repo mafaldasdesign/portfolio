@@ -1,198 +1,93 @@
 <!doctype html>
-<html lang="en">
+<html>
   <head>
     <title>Connect - Mafalda Reis</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Mafalda Reis Portfolio" />
     <meta name="keywords" content="Mafalda Reis Portfolio" />
+    <!-- Livraria bootstrap -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/bootstrap/css/bootstrap.min.css"
+    />
 
-    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <!-- Livraria de animação com o scroll -->
     <link rel="stylesheet" type="text/css" href="assets/aos/css/aos.css" />
-    <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css" />
+    <!-- Livraria de icons -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="assets/fontawesome/css/all.min.css"
+    />
+
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-
-    <style>
-      /* Ajustes exclusivos da página CONNECT */
-      html,
-      body {
-        min-height: 100%;
-      }
-
-      body.connect-page {
-        min-height: 100vh;
-        overflow-x: hidden;
-      }
-
-      .connect-page .header {
-        height: 8vh;
-      }
-
-      .connect-page .lista-header {
-        height: 8vh;
-        margin-bottom: 0;
-        padding-left: 0;
-        padding-right: 0;
-        font-family: Manrope, sans-serif;
-      }
-
-      .connect-page .connect-hero {
-        min-height: 100vh;
-      }
-
-      .connect-page .connect-hero-info {
-        min-height: 100vh;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-end;
-        justify-content: flex-start;
-        padding-bottom: 64px;
-      }
-
-      .connect-page .connect-title h1 {
-        margin: 0;
-        color: var(--azul);
-        font-size: 220px;
-        line-height: 0.72;
-        font-weight: 400;
-      }
-
-      .connect-page .connect-info {
-        padding-bottom: 2px;
-      }
-
-      .connect-page .connect-info p {
-        margin: 0;
-        color: var(--branco);
-        font-size: 20px;
-        line-height: 1.4;
-      }
-
-      .connect-page .connect-info .connect-location {
-        margin-bottom: 24px;
-      }
-
-      .connect-page .connect-info a {
-        color: var(--branco);
-        text-decoration: none;
-      }
-
-      .connect-page .connect-socials {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-end;
-        gap: 38px;
-        padding-bottom: 0;
-      }
-
-      .connect-page .connect-socials > a {
-        display: inline-flex;
-        align-items: center;
-        color: var(--branco);
-        font-size: 25px;
-        line-height: 1;
-        text-decoration: none;
-      }
-
-      .connect-page .connect-socials .btn-blue {
-        white-space: nowrap;
-        font-family: Manrope, sans-serif;
-        font-size: 18px;
-        line-height: 1;
-        padding: 14px 24px;
-      }
-
-      @media (max-width: 1199.98px) {
-        .connect-page .connect-title h1 {
-          font-size: clamp(120px, 16vw, 190px);
-        }
-      }
-
-      @media (max-width: 767.98px) {
-        body.connect-page {
-          overflow-y: auto;
-        }
-
-        .connect-page .lista-header {
-          padding-left: 12px;
-          padding-right: 12px;
-        }
-
-        .connect-page .connect-hero-info {
-          min-height: 100vh;
-          align-content: flex-end;
-          row-gap: 38px;
-          padding-bottom: 38px;
-        }
-
-        .connect-page .connect-title,
-        .connect-page .connect-info,
-        .connect-page .connect-socials {
-          width: 100%;
-        }
-
-        .connect-page .connect-title h1 {
-          font-size: clamp(105px, 31vw, 150px);
-          line-height: 0.72;
-        }
-
-        .connect-page .connect-socials {
-          gap: 24px;
-        }
-      }
-    </style>
   </head>
-
-  <body class="bg-black connect-page">
+  <body class="bg-black">
     <header class="header">
       <nav class="nav">
         <ul class="lista-header container">
           <li><a href="index.html">HOME</a></li>
           <li><a href="connect.html">CONNECT</a></li>
-          <li><a href="work.html">MENU</a></li>
+          <li><a href="work.html">WORK</a></li>
         </ul>
       </nav>
     </header>
-
-    <main>
-      <section class="connect-hero container">
-        <div class="connect-hero-info row">
-          <div class="connect-title col-6">
-            <h1>let's<br />connect</h1>
-          </div>
-
+    <div class="connect-hero container">
+      <div class="connect-hero-info row">
+        <div class="connect-title col-6">
+          <h1>let's<br />connect</h1>
+        </div>
           <div class="connect-info col-3">
-            <p class="connect-location">Porto, Portugal</p>
-            <p><a href="tel:+351939108823">+351 939 108 823</a></p>
+            <p>Porto,Portugal</p>
+
             <p>
-              <a href="mailto:mafaldas.design@gmail.com">mafaldas.design@gmail.com</a>
+              <a href="tel:+351939108823">+351 939 108 823</a>
             </p>
-          </div>
 
-          <div class="connect-socials col-3">
-            <a href="#" aria-label="LinkedIn">
-              <i class="fa-brands fa-linkedin-in"></i>
+            <a href="mailto:mafaldas.design@gmail.com">
+              <p>mafaldas.design@gmail.com</p>
             </a>
-
+          </div>
+        </div>
+        <div class="connect-socials col-3">
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-behance"></i></a>
+          <div>
             <button
               class="btn-blue"
               type="button"
-              onclick="window.open('files/mafalda-reis-cv.pdf', '_blank', 'noopener,noreferrer')"
+              onclick="
+                window.open(
+                  'files/mafalda-reis-cv.pdf',
+                  '_blank',
+                  'noopener,noreferrer',
+                )
+              "
             >
               DOWNLOAD MY CV
             </button>
           </div>
         </div>
-      </section>
-    </main>
-
+      </div>
+    </div>
+    <!-- Livraria jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Livraria bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Livraria de animação com o scroll -->
     <script src="assets/aos/js/aos.js"></script>
+    <!-- Livraria de icons -->
     <script src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Importar o meu Script -->
+    <script src="js/scripts.js"></script>
+    <!-- Cursor personalizado -->
     <script src="js/cursor.js"></script>
+    <!-- Hover dos círculos "about me" -->
+    <script src="js/about-circles.js"></script>
+    <!-- Menu de ecrã inteiro -->
+    <script src="js/menu.js"></script>
   </body>
 </html>
