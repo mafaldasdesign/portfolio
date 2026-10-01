@@ -17,15 +17,31 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
 	<body class="bg-blue">
+		<!-- Cursor personalizado -->
+		<div class="custom-cursor"></div>
+		<img class="cursor-image" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+
 		<header class="header">
 			<nav class="nav">
 				<ul class="lista-header container">
-					<li><a href="index.html">HOME</a></li>
-					<li><a href="connect.html">CONNECT</a></li>
-						<li><a href="work.html">WORK</a></li>
+					<li><a href="index.html">MAFALDA REIS</a></li>
+					<li><a href="#" id="menuToggle">MENU</a></li>
 				</ul>
 			</nav>
 		</header>
+
+		<!-- Menu de ecrã inteiro -->
+		<div class="offcanvas-menu" id="offcanvasMenu">
+			<nav class="offcanvas-nav">
+				<ul>
+					<li><a href="index.html">HOME</a></li>
+					<li><a href="work.html">WORK</a></li>
+					<li><a href="connect.html">CONNECT</a></li>
+				</ul>
+			</nav>
+		</div>
+
+		<div class="page-wrap bg-blue">
 		<main>
 			<div class="work-projects container">
 				<div class="project-row-cards row">
@@ -85,10 +101,11 @@
 				</div>
 				<div class="line"></div>
 				<div class="credits-div">
-					<span class="credits">© 2026 Mafalda Reis  </p>
+					<span class="credits">© 2026 Mafalda Reis</span>
 				</div>
 			</div>
 		</footer>
+		</div>
 		<!-- Livraria jQuery -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 		<!-- Livraria bootstrap -->

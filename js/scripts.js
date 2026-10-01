@@ -1,4 +1,7 @@
+// Só corre nas páginas que tenham o elemento .palco (exercícios de JS)
+(function () {
 var palco = document.querySelector('.palco');
+if (!palco) return;
 
 /// STRINGS
 
@@ -199,3 +202,4 @@ function ale(min, max){
 }
 
 palco.innerHTML += '<br><h1 style=\'text-align:center; margin-top:100px; margin-bottom:100px; color:green;\'>'+ale(500,502)+'</h1>';
+})();

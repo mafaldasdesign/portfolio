@@ -28,19 +28,19 @@ img {
 h1 {
   font-family: Agharti-Black, sans-serif;
   color: var(--preto);
-  font-size: 220px;
+  font-size: clamp(60px, 15.3vw, 220px);
   margin: 0px;
 }
 h2 {
   font-family: Agharti-Black, sans-serif;
   color: var(--branco);
-  font-size: 130px;
+  font-size: clamp(44px, 9vw, 130px);
   margin: 0px;
 }
 h4 {
   font-family: Agharti-Black, sans-serif;
   color: var(--branco);
-  font-size: 43px;
+  font-size: clamp(26px, 3vw, 43px);
   margin: 0px;
 }
 p {
@@ -60,10 +60,10 @@ p {
   font-weight: 700;
 }
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   height: 8vh;
   z-index: 100;
 }
@@ -73,7 +73,7 @@ p {
   z-index: 101;
 }
 .lista-header {
-  width: 100vw;
+  width: 100%;
   height: 8vh;
   display: flex;
   flex-direction: row;
@@ -158,7 +158,8 @@ p {
 .nav-footer-menu {
   display: flex;
   flex-direction: row;
-  gap: 100px;
+  flex-wrap: wrap;
+  gap: 40px clamp(24px, 6vw, 100px);
 }
 .line {
   width: 100%;
@@ -170,7 +171,7 @@ p {
 }
 .footer-title h2 {
   color: var(--preto);
-  line-height: 115px;
+  line-height: 0.9;
 }
 .nav-footer-menu h4 {
   margin-bottom: 50px;
@@ -289,4 +290,227 @@ p {
 a {
   text-decoration: none;
   color: var(--branco);
+}
+
+/* CURSOR PERSONALIZADO */
+
+body.cursor-ready,
+body.cursor-ready a,
+body.cursor-ready button {
+  cursor: none;
+}
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: var(--azul);
+  mix-blend-mode: difference;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition:
+    width 0.25s,
+    height 0.25s,
+    opacity 0.2s;
+}
+body.cursor-ready .custom-cursor {
+  opacity: 1;
+}
+body.cursor-ready .custom-cursor.is-large {
+  width: 48px;
+  height: 48px;
+}
+body.cursor-ready .custom-cursor.is-hidden {
+  opacity: 0;
+}
+.cursor-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.6);
+  transition:
+    opacity 0.25s,
+    transform 0.25s;
+}
+.cursor-image.is-visible {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* ZOOM NAS IMAGENS DOS TRABALHOS */
+
+.project-card a {
+  display: block;
+  overflow: hidden;
+}
+.project-card img {
+  display: block;
+  transition: transform 0.6s ease;
+}
+.project-card a:hover img {
+  transform: scale(1.08);
+}
+
+/* MENU DE ECRÃ INTEIRO */
+
+.page-wrap {
+  position: relative;
+  transition:
+    transform 0.8s cubic-bezier(0.76, 0, 0.24, 1),
+    border-radius 0.8s;
+  transform-origin: 50% 50%;
+}
+body.menu-open {
+  overflow: hidden;
+  background-color: var(--preto) !important;
+}
+body.menu-open .page-wrap {
+  transform: translateX(-30vw) scale(0.7);
+  border-radius: 24px;
+  overflow: hidden;
+}
+.offcanvas-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 45vw;
+  height: 100vh;
+  background-color: var(--azul);
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  padding-left: 60px;
+  transform: translateX(100%);
+  transition: transform 0.8s cubic-bezier(0.76, 0, 0.24, 1);
+}
+body.menu-open .offcanvas-menu {
+  transform: translateX(0);
+}
+.offcanvas-nav ul {
+  margin: 0;
+  padding: 0;
+}
+.offcanvas-nav li {
+  list-style: none;
+}
+.offcanvas-nav a {
+  font-family: Agharti-Black, sans-serif;
+  font-size: 90px;
+  line-height: 1.1;
+  color: var(--branco);
+  transition: opacity 0.3s;
+}
+.offcanvas-nav a:hover {
+  opacity: 0.6;
+}
+@media (max-width: 767px) {
+  .offcanvas-menu {
+    width: 100vw;
+    padding-left: 30px;
+  }
+  .offcanvas-nav a {
+    font-size: 56px;
+  }
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 991.98px) {
+  .connect-title,
+  .footer-uprow > .footer-title,
+  .footer-uprow > .footer-nav {
+    width: 100%;
+  }
+  .footer-uprow > .footer-title {
+    margin-bottom: 40px;
+  }
+  .connect-info,
+  .connect-socials {
+    width: 50%;
+  }
+  .hp-about-title,
+  .hp-about-p,
+  .btns-blue,
+  .hero-p,
+  .hp-projects-p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+  .header,
+  .lista-header {
+    height: 70px;
+  }
+  .hp-about {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
+  .hp-projects {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .project-row-cards {
+    margin-top: 40px;
+    row-gap: 24px;
+  }
+  .work-projects {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  .connect-hero-info {
+    height: auto;
+    min-height: 100vh;
+    padding-top: 100px;
+    padding-bottom: 40px;
+    row-gap: 32px;
+  }
+  .connect-info,
+  .connect-socials {
+    width: 100%;
+  }
+  .ora-hero {
+    height: 70vh;
+  }
+  .ora-bg {
+    top: 70px;
+    height: calc(70vh - 70px);
+  }
+  .ora-information {
+    min-height: auto;
+  }
+  .ora-information .row > div {
+    margin-bottom: 24px;
+  }
+  .visit {
+    min-height: auto;
+    margin-bottom: 40px;
+  }
+  .footer-info {
+    padding-top: 48px;
+    padding-bottom: 32px;
+  }
+  .nav-footer-menu h4 {
+    margin-bottom: 20px;
+  }
+  .footer-uprow {
+    margin-bottom: 32px;
+  }
 }
