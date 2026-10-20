@@ -1,168 +1,761 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>Portfolio Mafalda Reis</title>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="description" content="Mafalda Reis Portfolio">
-		<meta name="keywords" content="Mafalda Reis Portfolio">
-		<!-- Livraria bootstrap -->
-		<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
-			
-		<!-- Livraria de animação com o scroll -->
-		<link rel="stylesheet" type="text/css" href="assets/aos/css/aos.css">
-		<!-- Livraria de icons -->
-		<link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css">
+<!doctype html>
+<html lang="pt" class="is-loading">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mafalda Reis — Designer Digital</title>
+    <meta
+      name="description"
+      content="Portfólio de Mafalda Reis, designer digital: web design, conteúdo para redes sociais e branding."
+    />
+    <link
+      rel="preload"
+      href="fonts/aghartiblack.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <noscript
+      ><style>
+        .preloader {
+          display: none;
+        }
+      </style></noscript
+    >
+  </head>
+  <body>
+    <div class="preloader" aria-hidden="true">
+      <div class="preloader__pill"><span class="preloader__num">0</span>%</div>
+    </div>
 
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-	</head>
-	<body class="bg-black">
-		<!-- Cursor personalizado -->
-		<div class="custom-cursor"></div>
-		<img class="cursor-image" alt="" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <header class="site-header">
+      <nav class="nav" aria-label="Principal">
+        <a href="#about"><span data-text="Sobre">Sobre</span></a>
+        <a href="#servicos"><span data-text="Serviços">Serviços</span></a>
+        <a href="#work"><span data-text="Projetos">Projetos</span></a>
+        <a href="#testemunho"><span data-text="Testemunho">Testemunho</span></a>
+        <a href="#contacto"><span data-text="Contacto">Contacto</span></a>
+      </nav>
 
-		<header class="header">
-			<nav class="nav">
-				<ul class="lista-header container">
-					<li><a href="index.html">MAFALDA REIS</a></li>
-					<li><a href="#" id="menuToggle">MENU</a></li>
-				</ul>
-			</nav>
-		</header>
+      <div class="lang" role="group" aria-label="Idioma">
+        <button class="lang__btn is-active" type="button" aria-pressed="true">
+          PT
+        </button>
+        <span class="lang__sep" aria-hidden="true">/</span>
+        <button class="lang__btn" type="button" aria-pressed="false">EN</button>
+      </div>
 
-		<!-- Menu de ecrã inteiro -->
-		<div class="offcanvas-menu" id="offcanvasMenu">
-			<nav class="offcanvas-nav">
-				<ul>
-					<li><a href="index.html">HOME</a></li>
-					<li><a href="work.html">WORK</a></li>
-					<li><a href="connect.html">CONNECT</a></li>
-				</ul>
-			</nav>
-		</div>
+      <div class="bubble-bar">
+        <a class="bubble bubble--logo" href="#inicio">Mafalda</a>
+        <button
+          class="bubble bubble--toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="bubble-menu"
+          aria-label="Abrir menu"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
 
-		<div class="page-wrap bg-black">
-		<main class="bg-black">
-			<div class="hp-hero bg-blue">
-				<div class="container info-hero">
-					<div class="hero-title">
-						<div class="h1-hero"><h1>mafalda</h1></div>
-						<div class="h2-hero"><h2>portfolio</h2></div>
-					</div>
-				</div>
-			</div>
-			<div class="hp-about container">
-				<div class="hp-about-info row">
-					<div class="hp-about-title col-6">
-						<h2>aBout me</h2>
-					</div>
-				</div>
-				<div class="hp-about-info row">
-					<div class="hp-about-p col-6">
-						<p>Hi! I'm Mafalda, a designer driven by curiosity and a love for creating things that feel as good as they look. With a background in Design, I found my place in the digital world, where creativity, strategy and interaction come together.
-						For me, every project is an opportunity to explore, experiment and turn an idea into something meaningful.</p>
-					</div>
-				</div>
-				<div class="hp-about-info row">
-					<div class="btns-blue col-6">
-						<button class="btn-blue" type="button" onclick="window.open('assets/mafaldareis_cv.pdf', '_blank', 'noopener,noreferrer')">DOWNLOAD MY CV</button>
-					</div>
-				</div>
-			</div>
-			<div class="hp-projects container">
-				<div class="hp-projects-info row">
-					<div class="hero-p col-7">
-						<p>I design websites that do more than look good. They tell stories, solve problems and create meaningful experiences. My approach combines strategy, interaction and visual design to build digital experiences with purpose.<br>My goal is simple: <span class="bold">create work people remember.</span></p>
-					</div>
-					<div class="hp-projects-p col-7">
-						<p>A selection of projects where ideas, design and interaction come together to create meaningful digital experiences.</p>
-					</div>
-				</div>
-				<div class="project-row-cards row">
-					<div class="project-card col-12 col-md-4">
-						<a href="ora.html">
-							<img src="img/ora-mockupcard.png" alt="Projeto Ora" class="img-fluid">
-						</a>
-					</div>
+    <nav
+      class="bubble-menu"
+      id="bubble-menu"
+      aria-label="Menu"
+      aria-hidden="true"
+    >
+      <ul>
+        <li>
+          <a class="bubble-item" href="#about" style="--i: 0; --r: -8deg"
+            >Sobre</a
+          >
+        </li>
+        <li>
+          <a class="bubble-item" href="#servicos" style="--i: 1; --r: 8deg"
+            >Serviços</a
+          >
+        </li>
+        <li>
+          <a class="bubble-item" href="#work" style="--i: 2; --r: 8deg"
+            >Projetos</a
+          >
+        </li>
+        <li>
+          <a class="bubble-item" href="#testemunho" style="--i: 3; --r: -8deg"
+            >Testemunho</a
+          >
+        </li>
+        <li>
+          <a class="bubble-item" href="#contacto" style="--i: 4; --r: 6deg"
+            >Contacto</a
+          >
+        </li>
+      </ul>
+    </nav>
 
-					<div class="project-card col-12 col-md-4">
-						<a href="music.html">
-							<img src="img/music-mockupcard.png" alt="Projeto Ora" class="img-fluid">
-						</a>
-					</div>
+    <main>
+      <section class="hero" id="inicio">
+        <div class="container hero__inner">
+          <h1 class="hero__name">mafaldas.design</h1>
 
-					<div class="project-card col-12 col-md-4">
-						<a href="#">
-							<img src="img/placeholder-azul.jpg" alt="Projeto Ora" class="img-fluid">
-						</a>
-					</div>
-				</div>
-			</div>
-		</main>
-		<footer class="footer bg-blue">
-			<div class="footer-info container">
-				<div class="footer-uprow row">
-					<div class="footer-title col-5">
-						<h2>let's<br>connect</h2>
-					</div>
-					<div class="footer-nav col-7">
-						<nav class="nav-footer-menu">
-							<div class="footer-menu">
-								<h4>MENU</h4>
-								<ul class="ul-footer">
-									<li><a href="index.html">HOME</a></li>
-									<li><a href="work.html">WORK</a></li>
-									<li><a href="connect.html">CONNECT</a></li>
-								</ul>
-							</div>
-							<div class="footer-socials">
-								<h4>SOCIALS</h4>
-								<ul class="ul-footer">
-									<li><a href="index.html">LINKEDIN</a></li>
-									<li><a href="work.html">BEHANCE</a></li>
-								</ul>
-							</div>
-							<div class="footer-connect">
-								<h4>CONNECT</h4>
-								<ul class="ul-footer">
-									<li><a href="index.html">PORTO,PORTUGAL</a></li>
-									<li><a href="work.html">EMAIL</a></li>
-									<li><a href="connect.html">CALL ME</a></li>
-								</ul>
-							</div>
-						</nav>
-					</div>
-				</div>
-				<div class="line"></div>
-				<div class="credits-div">
-					<span class="credits">© 2026 Mafalda Reis</span>
-				</div>
-			</div>
-		</footer>
-		</div>
-		<!-- Livraria jQuery -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-		<!-- Livraria bootstrap -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.8/umd/popper.min.js"></script>
-		<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-		<!-- Livraria de animação com o scroll -->
-		<script src="assets/aos/js/aos.js"></script>
-		<!-- Livraria de icons -->
-		<script src="assets/fontawesome/js/all.min.js"></script>
-		<!-- Importar o meu Script -->
-		<script src="js/scripts.js"></script>
-		<!-- Cursor personalizado -->
-		<script src="js/cursor.js"></script>
-		<!-- Scroll horizontal dos work-cards -->
-		<script src="js/work-scroll.js"></script>
-		<!-- Hover dos círculos "about me" -->
-		<script src="js/about-circles.js"></script>
-		<!-- Menu de ecrã inteiro -->
-		<script src="js/menu.js"></script>
+          <div class="hero__stage">
+            <div class="hero__text">
+              <p class="availability">
+                <span class="availability__dot" aria-hidden="true"></span
+                >Disponível
+              </p>
+              <p
+                class="hero__title"
+                aria-label="Crio websites, marcas e feeds à tua medida."
+              >
+                <span class="hero__line" aria-hidden="true">
+                  Crio
+                  <span class="rotator" data-words="websites, marcas, feeds"
+                    ><span class="rotator__word is-current"
+                      >websites</span
+                    ></span
+                  >
+                </span>
+                <span class="hero__line" aria-hidden="true">à tua medida.</span>
+              </p>
+            </div>
 
-		<!-- In Page -->
-		<script>
-			console.log("Ola JS in Page")
-		</script>
-	</body>
+            <figure class="hero__media">
+              <img
+                src="img/hero-portrait.jpg"
+                alt="Retrato de Mafalda Reis sentada num cadeirão"
+                width="1024"
+                height="1280"
+              />
+            </figure>
+
+            <div class="hero__actions">
+              <button class="btn" type="button" data-modal="contacto">
+                Vamos falar!
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container about" id="about">
+        <h2 class="about__title split-text">
+          Olá! Sou a Mafalda, designer digital que transforma ideias em marcas e
+          websites com personalidade.
+        </h2>
+
+        <div class="about__body reveal">
+          <p>
+            A tua marca merece mais do que um design bonito. Precisa de uma
+            presença digital que transmita confiança, se destaque da
+            concorrência e transforme visitantes em potenciais clientes. É com
+            esse objetivo que desenvolvo cada projeto, aliando criatividade,
+            estratégia e funcionalidade.
+          </p>
+          <p>
+            Cada negócio tem uma história, objetivos e desafios diferentes. Por
+            isso, trabalho de perto contigo para compreender o que realmente
+            precisas e criar soluções à medida, sem fórmulas repetidas. Do
+            primeiro conceito ao resultado final, tens acompanhamento direto em
+            cada etapa.
+          </p>
+        </div>
+      </section>
+
+      <section class="section container" id="servicos">
+        <h2 class="section-title reveal">O que eu faço.</h2>
+
+        <ul class="services reveal">
+          <li class="service">
+            <button
+              class="service__head"
+              type="button"
+              aria-expanded="false"
+              aria-controls="servico-web"
+            >
+              <span class="service__num">01</span>
+              <span class="service__title">Web design</span>
+              <span class="service__icon" aria-hidden="true"></span>
+            </button>
+            <div class="service__panel" id="servico-web">
+              <div class="service__body">
+                <p>
+                  Crio websites à medida que combinam design, funcionalidade e
+                  uma experiência intuitiva, ajudando o teu negócio a
+                  destacar-se, transmitir confiança e transformar visitas em
+                  oportunidades.
+                </p>
+                <ul class="service__tags">
+                  <li class="tag">Design à medida</li>
+                  <li class="tag">UX/UI design</li>
+                  <li class="tag">Desenvolvimento web</li>
+                  <li class="tag">Website responsivo</li>
+                  <li class="tag">Otimização para conversão</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="service">
+            <button
+              class="service__head"
+              type="button"
+              aria-expanded="false"
+              aria-controls="servico-social"
+            >
+              <span class="service__num">02</span>
+              <span class="service__title">Redes sociais</span>
+              <span class="service__icon" aria-hidden="true"></span>
+            </button>
+            <div class="service__panel" id="servico-social">
+              <div class="service__body">
+                <p>
+                  Crio conteúdos visuais que dão personalidade às tuas redes
+                  sociais, reforçam a identidade da tua marca e ajudam a captar
+                  a atenção do público certo.
+                </p>
+                <ul class="service__tags">
+                  <li class="tag">Design para redes sociais</li>
+                  <li class="tag">Conteúdo visual</li>
+                  <li class="tag">Carrosséis</li>
+                  <li class="tag">Stories</li>
+                  <li class="tag">Conteúdo estratégico</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="service">
+            <button
+              class="service__head"
+              type="button"
+              aria-expanded="false"
+              aria-controls="servico-branding"
+            >
+              <span class="service__num">03</span>
+              <span class="service__title">Branding</span>
+              <span class="service__icon" aria-hidden="true"></span>
+            </button>
+            <div class="service__panel" id="servico-branding">
+              <div class="service__body">
+                <p>
+                  Desenvolvo identidades visuais que refletem a essência do teu
+                  negócio, criam reconhecimento e ajudam a tua marca a
+                  destacar-se num mercado cada vez mais competitivo.
+                </p>
+                <ul class="service__tags">
+                  <li class="tag">Direção criativa</li>
+                  <li class="tag">Brand guidelines</li>
+                  <li class="tag">Manual da marca</li>
+                  <li class="tag">Paleta e tipografia</li>
+                  <li class="tag">Design de logotipo</li>
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="projects" id="work" style="--count: 3">
+        <div class="projects__sticky">
+          <div class="container projects__grid">
+            <div class="projects__media">
+              <a
+                class="slide is-active"
+                href="#projeto-ora"
+                data-modal="ora"
+                data-slide="0"
+              >
+                <img
+                  src="img/ora-card.jpg"
+                  alt="Website ORA aberto num portátil, com uma garrafa de champanhe ao lado"
+                  width="1536"
+                  height="1024"
+                  loading="lazy"
+                />
+                <ul class="tags">
+                  <li class="tag">Web design</li>
+                </ul>
+              </a>
+              <a
+                class="slide"
+                href="#projeto-taxca"
+                data-modal="taxca"
+                data-slide="1"
+              >
+                <img
+                  src="img/projects/taxca-capa.jpg"
+                  alt="Publicações do Taxca Bar para Instagram"
+                  width="1800"
+                  height="1600"
+                  loading="lazy"
+                />
+                <ul class="tags">
+                  <li class="tag">Redes sociais</li>
+                </ul>
+              </a>
+              <a
+                class="slide"
+                href="#projeto-nadia"
+                data-modal="nadia"
+                data-slide="2"
+              >
+                <img
+                  src="img/projects/nadia-capa.jpg"
+                  alt="Duas crianças a brincar com cartões de letras, com o logótipo da Nadia Ribeiro, terapeuta da fala"
+                  width="1182"
+                  height="1330"
+                  loading="lazy"
+                />
+                <ul class="tags">
+                  <li class="tag">Branding</li>
+                </ul>
+              </a>
+            </div>
+
+            <div class="projects__info">
+              <div class="projects__counter" aria-hidden="true">
+                <span class="projects__current">01</span> / 03
+              </div>
+
+              <div class="projects__texts">
+                <article class="info is-active" data-slide="0">
+                  <h2 class="project__title">ORA</h2>
+                  <p>
+                    A ORA nasceu a pensar em como o champanhe está presente nos
+                    melhores momentos da nossa vida. Mesmo sem pensarmos nisso,
+                    está sempre ligado a celebrações: um aniversário, uma grande
+                    promoção, uma viagem.
+                  </p>
+                  <p>
+                    A ideia foi transformar isto num website que mostrasse às
+                    pessoas o motivo, e não apenas o produto.
+                  </p>
+                  <button class="btn" type="button" data-modal="ora">
+                    Mais
+                  </button>
+                </article>
+
+                <article class="info" data-slide="1">
+                  <h2 class="project__title">Taxca Bar</h2>
+                  <p>
+                    Redesign dos conteúdos para o Instagram do Taxca Bar, com
+                    foco numa comunicação visual mais apelativa, clara e
+                    organizada. O objetivo foi reforçar a identidade do bar,
+                    destacar a informação essencial e despertar o interesse de
+                    novos clientes.
+                  </p>
+                  <button class="btn" type="button" data-modal="taxca">
+                    Mais
+                  </button>
+                </article>
+
+                <article class="info" data-slide="2">
+                  <h2 class="project__title">Nadia Ribeiro</h2>
+                  <p>
+                    Criação de uma identidade visual para Nádia Ribeiro,
+                    terapeuta da fala, com o objetivo de construir uma presença
+                    profissional, coerente e reconhecível. Uma imagem pensada
+                    para transmitir confiança, reforçar a sua presença nas redes
+                    sociais e criar uma base sólida para o crescimento do
+                    negócio.
+                  </p>
+                  <button class="btn" type="button" data-modal="nadia">
+                    Mais
+                  </button>
+                </article>
+              </div>
+
+              <ol class="projects__dots" aria-hidden="true">
+                <li class="is-active"></li>
+                <li></li>
+                <li></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section container testimonial" id="testemunho">
+        <figure class="reveal">
+          <blockquote class="testimonial__quote">
+            “A Mafalda conseguiu tornar exatamente aquilo que eu queria em
+            realidade. Fez um logotipo que realmente tem a ver comigo, e que me
+            representa desde as cores à aparência dos logotipos e do restante
+            material. Esta identidade surgiu do zero só com ideias que eu
+            tinha.”
+          </blockquote>
+          <figcaption class="testimonial__author">
+            Nádia Ribeiro | Terapeuta da fala | Branding
+          </figcaption>
+        </figure>
+        <div class="testimonial__cta reveal">
+          <button class="btn" type="button" data-modal="contacto">
+            Quero o meu projeto
+          </button>
+        </div>
+      </section>
+
+      <section class="contact-reveal" id="contacto">
+        <div class="contact-reveal__window">
+          <div class="contact">
+            <div class="contact__inner">
+              <h2 class="contact__title">Tens um projeto?</h2>
+              <div class="contact__info">
+                <p class="contact__text">
+                  Preenche o formulário que assim que possível entro em contacto
+                  para falarmos um bocadinho sobre o teu projeto!
+                </p>
+                <ul class="contact__links">
+                  <li>
+                    <span class="contact__label">E-mail</span>
+                    <a href="mailto:mafaldas.design@gmail.com"
+                      >mafaldas.design@gmail.com</a
+                    >
+                  </li>
+                  <li>
+                    <span class="contact__label">Telemóvel</span>
+                    <a href="tel:+351939108823">+351 939 108 823</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="contact__form">
+                <form class="form js-contact-form">
+                  <label class="visually-hidden" for="nome">Nome</label>
+                  <input
+                    class="field"
+                    id="nome"
+                    name="nome"
+                    type="text"
+                    placeholder="Nome"
+                    autocomplete="name"
+                    required
+                  />
+
+                  <label class="visually-hidden" for="email">E-mail</label>
+                  <input
+                    class="field"
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="E-mail"
+                    autocomplete="email"
+                    required
+                  />
+
+                  <label class="visually-hidden" for="mensagem"
+                    >Fala-me do teu projeto</label
+                  >
+                  <textarea
+                    class="field field--area"
+                    id="mensagem"
+                    name="mensagem"
+                    rows="5"
+                    placeholder="Fala-me do teu projeto"
+                  ></textarea>
+
+                  <button class="btn btn--light" type="submit">Enviar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="site-footer__top">
+          <p class="site-footer__claim">
+            Vamos criar algo que seja a tua cara.
+          </p>
+
+          <nav class="site-footer__col" aria-label="Rodapé">
+            <span class="site-footer__label">Menu</span>
+            <a href="#about">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#work">Projetos</a>
+            <a href="#testemunho">Testemunho</a>
+            <a href="#contacto">Contacto</a>
+          </nav>
+
+          <div class="site-footer__col">
+            <span class="site-footer__label">Redes</span>
+            <a
+              href="https://www.instagram.com/mafaldas.design/"
+              target="_blank"
+              rel="noopener"
+              >Instagram</a
+            >
+            <a
+              href="https://www.behance.net/mafaldasreis"
+              target="_blank"
+              rel="noopener"
+              >Behance</a
+            >
+          </div>
+
+          <div class="site-footer__col">
+            <span class="site-footer__label">Contacto</span>
+            <a href="mailto:mafaldas.design@gmail.com"
+              >mafaldas.design@gmail.com</a
+            >
+            <a href="tel:+351939108823">+351 939 108 823</a>
+            <span>Porto, Portugal</span>
+          </div>
+        </div>
+
+        <p class="site-footer__name" aria-hidden="true">mafaldas.design</p>
+
+        <div class="site-footer__bottom">
+          <span>© 2026 Mafalda Reis</span>
+          <a href="#inicio">Voltar ao topo ↑</a>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="pmodal"
+      id="projeto-ora"
+      data-modal-id="ora"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="pm-title-ora"
+      hidden
+    >
+      <div class="pmodal__window">
+        <button class="pmodal__close" type="button" aria-label="Fechar">
+          <span></span><span></span>
+        </button>
+
+        <div class="pmodal__grid">
+          <div class="pmodal__media">
+            <img
+              class="pm-slide is-active"
+              src="img/projects/ora-1.jpg"
+              alt="ORA — imagem 1"
+              loading="lazy"
+            />
+            <img
+              class="pm-slide"
+              src="img/projects/ora-2.jpg"
+              alt="ORA — imagem 2"
+              loading="lazy"
+            />
+            <img
+              class="pm-slide"
+              src="img/projects/ora-3.jpg"
+              alt="ORA — imagem 3"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="pmodal__info">
+            <p class="pmodal__project" id="pm-title-ora">
+              ORA — Marca de champanhe
+            </p>
+            <h2 class="pmodal__title">Gostou deste projeto?</h2>
+            <p class="pmodal__lead">Envia-me uma mensagem e podemos fazer algo parecido!</p>
+            <form class="form pmodal__form js-contact-form">
+              <input type="hidden" name="projeto" value="ORA" />
+              <label class="visually-hidden" for="pm-ora-nome">Nome</label>
+              <input class="field" id="pm-ora-nome" name="nome" type="text" placeholder="Nome" autocomplete="name" required />
+              <label class="visually-hidden" for="pm-ora-email">E-mail</label>
+              <input class="field" id="pm-ora-email" name="email" type="email" placeholder="E-mail" autocomplete="email" required />
+              <label class="visually-hidden" for="pm-ora-mensagem">Fala-me do teu projeto</label>
+              <textarea class="field field--area" id="pm-ora-mensagem" name="mensagem" rows="3" placeholder="Fala-me do teu projeto"></textarea>
+              <button class="btn" type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="pmodal"
+      id="projeto-taxca"
+      data-modal-id="taxca"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="pm-title-taxca"
+      hidden
+    >
+      <div class="pmodal__window">
+        <button class="pmodal__close" type="button" aria-label="Fechar">
+          <span></span><span></span>
+        </button>
+
+        <div class="pmodal__grid">
+          <div class="pmodal__media">
+            <img
+              class="pm-slide is-active"
+              src="img/projects/taxca-capa.jpg"
+              alt="Publicações do Taxca Bar para Instagram"
+              loading="lazy"
+            />
+            <img
+              class="pm-slide"
+              src="img/projects/taxca-popup.jpg"
+              alt="Perfil de Instagram do Taxca Bar num telemóvel"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="pmodal__info">
+            <p class="pmodal__project" id="pm-title-taxca">
+              Taxca Bar — Bar em Leça da Palmeira
+            </p>
+            <h2 class="pmodal__title">Gostou deste projeto?</h2>
+            <p class="pmodal__lead">Envia-me uma mensagem e podemos fazer algo parecido!</p>
+            <form class="form pmodal__form js-contact-form">
+              <input type="hidden" name="projeto" value="Taxca Bar" />
+              <label class="visually-hidden" for="pm-taxca-nome">Nome</label>
+              <input class="field" id="pm-taxca-nome" name="nome" type="text" placeholder="Nome" autocomplete="name" required />
+              <label class="visually-hidden" for="pm-taxca-email">E-mail</label>
+              <input class="field" id="pm-taxca-email" name="email" type="email" placeholder="E-mail" autocomplete="email" required />
+              <label class="visually-hidden" for="pm-taxca-mensagem">Fala-me do teu projeto</label>
+              <textarea class="field field--area" id="pm-taxca-mensagem" name="mensagem" rows="3" placeholder="Fala-me do teu projeto"></textarea>
+              <button class="btn" type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="pmodal"
+      id="projeto-nadia"
+      data-modal-id="nadia"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="pm-title-nadia"
+      hidden
+    >
+      <div class="pmodal__window">
+        <button class="pmodal__close" type="button" aria-label="Fechar">
+          <span></span><span></span>
+        </button>
+
+        <div class="pmodal__grid">
+          <div class="pmodal__media">
+            <img
+              class="pm-slide is-active"
+              src="img/projects/nadia-capa.jpg"
+              alt="Duas crianças a brincar com cartões de letras, com o logótipo da Nadia Ribeiro"
+              loading="lazy"
+            />
+            <img
+              class="pm-slide"
+              src="img/projects/nadia-cartoes.jpg"
+              alt="Cartões de visita cor de terracota da Nadia Ribeiro, terapeuta da fala"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="pmodal__info">
+            <p class="pmodal__project" id="pm-title-nadia">
+              Nádia Ribeiro — Terapeuta da fala
+            </p>
+            <h2 class="pmodal__title">Gostou deste projeto?</h2>
+            <p class="pmodal__lead">Envia-me uma mensagem e podemos fazer algo parecido!</p>
+            <form class="form pmodal__form js-contact-form">
+              <input type="hidden" name="projeto" value="Nádia Ribeiro" />
+              <label class="visually-hidden" for="pm-nadia-nome">Nome</label>
+              <input class="field" id="pm-nadia-nome" name="nome" type="text" placeholder="Nome" autocomplete="name" required />
+              <label class="visually-hidden" for="pm-nadia-email">E-mail</label>
+              <input class="field" id="pm-nadia-email" name="email" type="email" placeholder="E-mail" autocomplete="email" required />
+              <label class="visually-hidden" for="pm-nadia-mensagem">Fala-me do teu projeto</label>
+              <textarea class="field field--area" id="pm-nadia-mensagem" name="mensagem" rows="3" placeholder="Fala-me do teu projeto"></textarea>
+              <button class="btn" type="submit">Enviar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="pmodal pmodal--contact"
+      id="pop-contacto"
+      data-modal-id="contacto"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="pm-title-contacto"
+      hidden
+    >
+      <div class="pmodal__window">
+        <button class="pmodal__close" type="button" aria-label="Fechar">
+          <span></span><span></span>
+        </button>
+
+        <div class="pmodal__contact">
+          <div class="contact__inner">
+            <h2 class="contact__title" id="pm-title-contacto">
+              Tens um projeto?
+            </h2>
+            <div class="contact__info">
+              <p class="contact__text">
+                Preenche o formulário que assim que possível entro em contacto
+                para falarmos um bocadinho sobre o teu projeto!
+              </p>
+              <ul class="contact__links">
+                <li>
+                  <span class="contact__label">E-mail</span>
+                  <a href="mailto:mafaldas.design@gmail.com"
+                    >mafaldas.design@gmail.com</a
+                  >
+                </li>
+                <li>
+                  <span class="contact__label">Telemóvel</span>
+                  <a href="tel:+351939108823">+351 939 108 823</a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="contact__form">
+              <form class="form js-contact-form">
+                <label class="visually-hidden" for="pm-nome">Nome</label>
+                <input
+                  class="field"
+                  id="pm-nome"
+                  name="nome"
+                  type="text"
+                  placeholder="Nome"
+                  autocomplete="name"
+                  required
+                />
+
+                <label class="visually-hidden" for="pm-email">E-mail</label>
+                <input
+                  class="field"
+                  id="pm-email"
+                  name="email"
+                  type="email"
+                  placeholder="E-mail"
+                  autocomplete="email"
+                  required
+                />
+
+                <label class="visually-hidden" for="pm-mensagem"
+                  >Fala-me do teu projeto</label
+                >
+                <textarea
+                  class="field field--area"
+                  id="pm-mensagem"
+                  name="mensagem"
+                  rows="5"
+                  placeholder="Fala-me do teu projeto"
+                ></textarea>
+
+                <button class="btn btn--light" type="submit">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/vendor/lenis.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
